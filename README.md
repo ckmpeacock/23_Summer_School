@@ -63,4 +63,27 @@ It is important to note that the chosen dimension for each class (in this case, 
 The goals used by NWEA do not directly correspond to Arizona state standards and a crosswalk is not formally provided by NWEA. After identifying which goal will receive the focus of each grade-subject combination, Subject Matter Experts will provide a quick determination of which goals should be emphasized in order to target the selected goal.
 
 ## Summary
-After determining the appropriate clustering method, the process proceded smoothly. For the few students that were not placed in groups, use of the hierarchical clustering model proved valuable. Class sizes were consistent through grade levels and the focus for each classroom was easy to identify. As a follow up to this procedure, additional dimensions from the NWEA data should be considered for potential use in the clustering model(s) used.
+After determining the appropriate clustering method, the process proceded smoothly. For the few students that were not placed in groups, use of the hierarchical clustering model proved valuable. Class sizes were consistent through grade levels and the focus for each classroom was easy to identify. As a follow up to this procedure, additional dimensions from the NWEA data should be considered for potential use in the clustering model(s).
+
+A pre-post pair of assessments will be presented at the beginning and end of Summer School in order to determnie growth. This data may provide additional insights into the validity of this process for class assigment.
+
+## Select R code used in this process
+```
+## summer school kids
+roster_SAISIDs <- sum_sch_census$SAISID
+
+## sum sch roster tests taken
+## ssr = summer school roster
+ss_nwea <- full_nwea %>% subset(Student_StateID %in% roster_SAISIDs)
+
+demog_data <- ss_nwea %>% filter(Subject == "Math") %>% 
+  select(Student_StateID, StudentLastName, StudentFirstName, TestPercentile,
+         StudentGender, Grade)
+
+goal_names <- ss_nwea %>% filter(Subject == "Math" | Subject == "Reading") %>% select(Grade, Subject, Goal1Name, Goal2Name, Goal3Name, Goal4Name) %>% 
+  distinct() %>% pivot_longer(!c(Grade,Subject), names_to = "Goal", values_to = "Goal_Name") %>% arrange(Grade)
+goal_names$Goal <- goal_names$Goal %>% substr(5,5)
+goal_names$Goal <- as.numeric(goal_names$Goal)
+```
+
+<more coming>
