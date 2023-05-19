@@ -44,3 +44,20 @@ As a pratical matter, assigning students to classrooms with drastically differen
 
 (Aggregated data to be presented as necessary - shortly)
 
+## Class Assignment Process
+After confirming that all students had completed the NWEA EOY assessment, with the exception of one student who had not yet complted ELA, the class assignment process could begin. Students were divided by grade-subject and their assessment data were utilized by the anticlustering model to place students into groups. The data utilized in the anticlustering model were the component RIT Scores for each Goal based on grade-subject. NWEA provides an overal RIT Score, which is the primary metric for evaluation in a given subject. This overal RIT score is determined based on the performance in each of the Goals identified by grade and subject. Most grade-subject combinations have four (4) goals as the component parts. These four scores, after being scaled, are used as the dimensions utilized by the anticluster model. In a future study, NWEA data will be examined to determine whether additional or other dimensions should be added for a future use of this process. 
+
+In some cases, due to the group size equality parameter of balanced clustering, some students were not grouped. Twenty-two students were not placed into groups for this reason. A hierarchical model was also used on the data for each grade-subject combination. This allowed the twenty-two students in the 'left-over' group to be manually assigned. For each student in this group, they were placed in the same group as the most proximal student based on the hierarchical clustering model, at the same time attempting to maintain roughly equally sized classrooms for the teachers of a given grade level.
+
+The end result, as seen below, is that within any given grade level, no teacher has more than two students more than any other teacher. Class rosters for Summer School range from nine (9) per class in Grade 5 to fifteen (15) for one class in Grade 1 Math and one in Grade 1 Reading.
+
+(class size data - shortly)
+
+## Class Focus Process
+For every grade-subject, the summary data from the anticlustering model shows the various scores for each of the dimensions analyzed. The dimension that received the lowest score according to the model is the area representing the greatest need of the students placed in this group. It is important to note that this dimension (in this case, performance on a goal) does not necessarily mean that every student in this group will have the same group identified as their lowest scoring goal. For approximately 45% of the students, their lowest scoring goal (or tied for lowest scoring goal) matched the goal of the group into which they were placed. For an additional 40% of the students, the goal of the group into which they were placed was their second lowest or second highest (of four) scoring goal. Only approximately 15% of the students were placed into a group, the goal of which matched their hightest scoring goal. In such cases, it is clear that their homogeniety with the group in all other facets was prioritized.
+
+(data as necessary - shortly)
+
+The goals used by NWEA do not directly correspond to Arizona state standards and a crosswalk is not formally provided by NWEA. After identifying which goal will receive the focus of each grade-subject combination, Subject Matter Experts will provide a quick determination of which goals should be emphasized in order to target the selected goal.
+
+## Summary
