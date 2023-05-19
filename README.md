@@ -68,6 +68,8 @@ After determining the appropriate clustering method, the process proceded smooth
 A pre-post pair of assessments will be presented at the beginning and end of Summer School in order to determnie growth. This data may provide additional insights into the validity of this process for class assigment.
 
 ## Select R code used in this process
+note: one small segment here
+
 ```
 ## summer school kids
 roster_SAISIDs <- sum_sch_census$SAISID
@@ -80,10 +82,11 @@ demog_data <- ss_nwea %>% filter(Subject == "Math") %>%
   select(Student_StateID, StudentLastName, StudentFirstName, TestPercentile,
          StudentGender, Grade)
 
-goal_names <- ss_nwea %>% filter(Subject == "Math" | Subject == "Reading") %>% select(Grade, Subject, Goal1Name, Goal2Name, Goal3Name, Goal4Name) %>% 
+goal_names <- ss_nwea %>% filter(Subject == "Math" | Subject == "Reading") %>%
+  select(Grade, Subject, Goal1Name, Goal2Name, Goal3Name, Goal4Name) %>% 
   distinct() %>% pivot_longer(!c(Grade,Subject), names_to = "Goal", values_to = "Goal_Name") %>% arrange(Grade)
 goal_names$Goal <- goal_names$Goal %>% substr(5,5)
 goal_names$Goal <- as.numeric(goal_names$Goal)
 ```
+more coming soon
 
-<more coming>
