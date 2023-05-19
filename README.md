@@ -1,4 +1,4 @@
-# 23_Summer_School_Balsz
+# 23_Summer_School
 Allocating students to classes / teachers based on EOY assessments.
 
 ## Overview
@@ -32,7 +32,7 @@ KMeans and K-Mediods function similarly in that data are presented like a scatte
 
 The primary challenge with KMeans and K-Mediod clustering models is that, while they are designed to maximize homogeneity in-group and maximize heterogeneity between-groups, the result often leads to drastically different sized groups. This is not a necessary result of the method, but is a common result.
 
-Hierarchical clustering, similarly plots the datapoints in something like a scatterplot. Next the model sequentially groups datapoints by proximity until there is only one group. So, for example in our case, the model will combine the datapoints into groups of one or two, from the initial 51, resulting in 25+ groups. Then those groups will be grouped into larger groups based on proximity, resulting in approximately 12-15 groups. At each step groups are regrouped into larger groups until only one remains. When the model reachs K (number of teachers) number of groups, students are assigned into those groups.
+Hierarchical clustering similarly plots the datapoints in something like a scatterplot. Next the model sequentially groups datapoints by proximity until there is only one group. So, for example in our case, the model will combine the datapoints into groups of one or two, from the initial 51, resulting in 25+ groups. Then those groups will be grouped into larger groups based on proximity, resulting in approximately 12-15 groups. At each step groups are regrouped into larger groups until only one remains. When the model reachs K (number of teachers) number of groups, students are assigned into those groups.
 
 The primary challenge of Hierarchical clustering model is similar to the challenge experienced with KMeans and K-Mediod. Groups may be drastically different in size.
 
